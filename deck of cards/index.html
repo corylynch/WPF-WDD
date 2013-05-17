@@ -1,0 +1,55 @@
+<html>
+
+        <script>
+
+            var deck = Array();
+            var cntr = 0;
+            var suite = "none";
+            var number = "none";
+            var nmberAndsuite = "none";
+
+
+             for (i = 0; i <4; i++){
+
+             if (i==0) {suite = "Diamonds"}
+             if (i==1) {suite = "Hearts"}
+             if (i==2) {suite= "Spades"}
+             if (i==3) {suite = "Clubs"}
+
+
+              for (j = 0; j <13; j ++)
+              {
+                  if (j==0){number="One";}
+                  if (j==1){number="Two"}
+                  if (j==2){number="Three";}
+                  if (j==3){number="Four";}
+                  if (j==4){number="Five";}
+                  if (j==5){number="Six";}
+                  if (j==6){number="Seven";}
+                  if (j==7){number="Eight";}
+                  if (j==8){number="Nine";}
+                  if (j==9){number="Ten";}
+                  if (j==10){number ="Jack";}
+                  if (j==11){number="Queen";}
+                  if (j==12){number="King";}
+
+
+
+                  deck[cntr] = number+suite;
+                  cntr++;
+              }
+
+            }
+
+             for (i in deck){
+
+                 document.write (deck[i]+"<br/>");
+
+             }
+
+
+
+
+
+        </script>
+</html>

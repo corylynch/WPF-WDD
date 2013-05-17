@@ -1,0 +1,105 @@
+<html>
+    <script>
+
+        var Money = 0;
+
+        setInterval(
+
+                function(){
+
+                    Money++;
+                    document.getElementById("moneyCount").innerHTML = Money;
+
+                    //money counter
+
+                },200);
+
+                function Bike(){
+                    if (Money<45){ //displays "You don't have enough money"
+                     document.getElementById('notEnoughMoney').style.display= 'block';
+
+
+                    } else{  //subtracts $45 from money
+                    Money = Money - 45;
+                    document.getElementById('bike').innerHTML="You bought a bike!";
+                    document.getElementById('btn_RideBike').style.display= 'block';
+                    document.getElementById('notEnoughMoney').style.display= 'none';
+
+
+                }
+                }
+
+
+                function RideBike(){
+
+                    document.getElementById('bike').innerHTML=".................Your bike broke.";
+                    document.getElementById('btn_RideBike').style.display = 'none';
+                    document.getElementById('btn_BuyCar').style.display = 'block';
+
+                }
+
+
+
+                function Car(){
+
+                    if (Money<5000){ //displays "You don't have enough money"
+                        document.getElementById('notEnoughMoney').style.display= 'block';
+                        document.getElementById('btn_NeedMoney').style.display='block';
+
+
+
+                    } else{
+
+                        Money = Money - 5000;
+
+                        document.getElementById('bike').innerHTML="You bought a Car!";
+                        document.getElementById('notEnoughMoney').style.display= 'none';
+
+                    }
+                }
+
+
+
+                function NeedMoney(){
+
+                    Money = Money + 500;
+                }
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <body>
+    <br/>
+    <br/>
+    <br/>
+    <span id = 'mon'>Total Cash: $</span> <span id='moneyCount'></span> <br/>
+    <span id = "notEnoughMoney"style="display: none;"> You don't have enough money. </span>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <input type="button" id="btn_BuyBike" value='Buy a bike ($45)' onclick="Bike()">
+    <input type ="button" style="display: none;" id="btn_BuyCar" value='Buy a Car ($5,000)' onclick="Car()">
+    <input type="button" style="display: none;" id="btn_NeedMoney" value='Click for $$$$' onclick="NeedMoney()">
+    <br/>
+    <br/>
+    <br/>
+    <span id = 'bike'></span> <br/>
+    <span id = 'broke'></span> <br/>
+    <input type="button" style="display: none;" id="btn_RideBike" value='Ride the Bike!' onclick="RideBike()"> <br/>
+    <br/>
+    <br/>
+    <br/>
+
+
+    </body>
+</html>

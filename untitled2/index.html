@@ -1,0 +1,40 @@
+ <html>
+        <script>
+        var Savings;
+        var Interest;
+        var an_Gain;
+        var Gain;
+        var an_Exp;
+        var Exp;
+        var Years;
+
+
+        Savings = 200000;
+        Interest = .01;
+        Gain = 2000;
+        an_Gain=Gain*12;
+        Exp = 4500
+        an_Exp = Exp*12;
+        Years = 0
+
+
+
+        while(Savings >= 0 )
+
+            {
+                Savings = Savings - an_Exp + an_Gain;
+                Savings = Savings+ (Savings * Interest);
+                Years = Years + 1;
+                console.log(Years);
+                console.log(Savings);
+
+            }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

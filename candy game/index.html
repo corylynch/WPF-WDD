@@ -1,0 +1,66 @@
+<html>
+
+        <script>
+
+
+
+          var Eat = 0;
+          var Toss = 0;
+          var Candy = 0;
+
+          function eatCandy(){
+                Eat=Eat+Candy;
+                Candy = 0;
+                   document.getElementById('eatCount').innerHTML = Eat;
+          }
+
+          function tossCandy(){
+              if (Candy<10){
+                  document.getElementById('desc').innerHTML="You don't have enough candy";
+
+              } else{
+                  Candy=Candy-10;
+                  Toss=Toss+10;
+
+                    document.getElementById('garbage').innerHTML= Toss;
+
+                    document.getElementById('desc').innerHTML=":Total Candy";
+              }
+            }
+
+          function sellCandy(){
+
+
+          }
+
+
+                setInterval(
+
+                    function(){
+
+                Candy++;
+                document.getElementById("candyCount").innerHTML = Candy;
+                        if (Candy>= 10){
+                            document.getElementById('desc').innerHTML=": Total Candy";
+                        }
+
+
+
+
+            },1000);
+
+
+        </script>
+
+       <body>
+       <span id='candyCount'></span>  <span id = 'desc'>:Total Candy</span> <br />
+       <span id='eatCount'></span> <span id= 'desc2'>: Total Candy eaten</span> <br />
+       <span id='garbage'></span> <span id = 'garbageDesc'>:Total Candy thrown away</span> <br/>
+       <span id='sellCandy'></span>  <span id = 'desc3'>: Money</span> <br />
+       <input type="button" id="btn_Drop" value='Drop Candy' onclick="tossCandy()"> <br/>
+       <input type="button" id='btn_Eat' value='Eat Candy' onclick='eatCandy()'> <br/>
+       <input type="button" id='btn_Sell' value='Sell Candy' onclick='sellCandy()'> <br/>
+
+
+       </body>
+</html>
